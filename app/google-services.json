@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "179811978734",
+    "firebase_url": "https://codecampirr.firebaseio.com",
+    "project_id": "codecampirr",
+    "storage_bucket": "codecampirr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179811978734:android:390e78d7bf0ecc1bbe12ff",
+        "android_client_info": {
+          "package_name": "com.example.codecampirr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179811978734-iq5q5191o7uutrn011q5mlgkrcums9v6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.codecampirr",
+            "certificate_hash": "9cda34e239359ee26637d5feac3baf2ccc69815f"
+          }
+        },
+        {
+          "client_id": "179811978734-0qmnjvhin9bk08vtdvu4rr4l83ffsh0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpybSUVONYRkSMdenEsdH93z5j455p-WY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179811978734-0qmnjvhin9bk08vtdvu4rr4l83ffsh0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
