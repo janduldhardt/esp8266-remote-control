@@ -2,19 +2,16 @@ package com.example.codecampirr
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
-    var isOn = false
-    var currentTemp = 20
+    private var isOn = false
+    private var currentTemp = 20
     val path = "airConference"
-
-
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,38 +37,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendButtonAction() {
-        if(!isOn){
+        if (!isOn) {
             sendStatusToFirebase("off")
-        }
-        else {
+        } else {
             sendStatusToFirebase()
         }
     }
 
     private fun powerTempUpAction() {
-       if(!isOn){
-           return
-       }
-
-        if(currentTemp == 27){
-            return;
+        if (!isOn || currentTemp == 27) {
+            return
         }
-
         currentTemp++
         tv_temp.text = currentTemp.toString()
         sendStatusToFirebase()
-
     }
 
     private fun powerTempDownAction() {
-        if(!isOn){
+        if (!isOn || currentTemp == 18) {
             return
         }
-
-        if(currentTemp == 18){
-            return;
-        }
-
         currentTemp--
         tv_temp.text = currentTemp.toString()
 
@@ -79,20 +64,21 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun powerOnButtonAction(){
+    private fun powerOnButtonAction() {
         isOn = !isOn
 
-        if(isOn){
+        if (isOn) {
             sendStatusToFirebase()
             tv_temp.text = currentTemp.toString()
-        }
-        else{
+            tv_celcius.text = "C°"
+        } else {
             sendStatusToFirebase("off")
             setTextViewsInvisible()
+            setTextCelsiusInvisible()
         }
     }
 
-    private fun sendStatusToFirebase(status : String = currentTemp.toString()){
+    private fun sendStatusToFirebase(status: String = currentTemp.toString()) {
         val database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("airConference/status")
 
@@ -100,8 +86,12 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun setTextViewsInvisible(){
+    private fun setTextViewsInvisible() {
         tv_temp.text = ""
+    }
+
+    private fun setTextCelsiusInvisible() {
+        tv_celcius.text = ""
     }
 
 }

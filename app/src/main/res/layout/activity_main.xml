@@ -21,18 +21,18 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="112dp"
+        android:background="@mipmap/new_ic_launcher_v2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_power_settings_new_black_24dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_temp_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_arrow_upward_black_24dp"
+        android:background="@mipmap/new_ic_upward"
         android:text="UP"
         app:layout_constraintBottom_toTopOf="@+id/tv_temp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,10 +41,10 @@
 
     <ImageButton
         android:id="@+id/btn_temp_down"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/ic_arrow_downward_black_24dp"
+        android:background="@mipmap/new_ic_downward"
         android:text="DOWN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -53,20 +53,20 @@
 
     <Button
         android:id="@+id/btn_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="44dp"
+        android:background="#F5AD94"
         android:text="SEND"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_temp_down" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_celcius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="C°"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_temp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -74,8 +74,9 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@mipmap/new_ic_launcher_v2"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="207dp" />
 
