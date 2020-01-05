@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     private var isOn = false
     private var currentTemp = 20
     val path = "airConference"
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
